@@ -1,10 +1,11 @@
+// import { Excalidraw } from "@excalidraw/excalidraw";
 import * as React from "react";
 
 import { useSandpack } from "../../hooks/useSandpack";
 import { css } from "../../styles";
 import { buttonClassName, iconClassName } from "../../styles/shared";
 import { useClassNames } from "../../utils/classNames";
-import { BackwardIcon, ForwardIcon, RefreshIcon } from "../icons";
+import { BackwardIcon, ForwardIcon, RefreshIcon, CleanIcon } from "../icons";
 
 import { splitUrl } from "./utils";
 
@@ -169,6 +170,14 @@ export const Navigator = ({
         type="text"
         value={relativeUrl}
       />
+      <button
+        aria-label="Clean page"
+        className={buttonsClassNames}
+        onClick={handleRefresh}
+        type="button"
+      >
+        <CleanIcon />
+      </button>
     </div>
   );
 };

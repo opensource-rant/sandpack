@@ -67,6 +67,18 @@ export const WithNavigator: React.FC = () => (
     </SandpackLayout>
   </SandpackProvider>
 );
+export const WithWhiteboard: React.FC = () => (
+  <SandpackProvider
+    files={{
+      "/App.js": code,
+    }}
+    template="react"
+  >
+    <SandpackLayout>
+      <SandpackPreview showWhiteboard />
+    </SandpackLayout>
+  </SandpackProvider>
+);
 
 export const MultipleRoutePreviews: React.FC = () => {
   return (

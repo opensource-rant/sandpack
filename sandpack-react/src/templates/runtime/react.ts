@@ -1,4 +1,22 @@
 import { commonFiles } from "../common";
+const ORIGINAL_CODE = `<Sandpack
+  customSetup={{ 
+    dependencies: { 
+      "react-markdown": "latest" 
+    }
+  }}
+  files={{
+    "/App.js": \`import ReactMarkdown from 'react-markdown' 
+
+export default function App() {
+  return (
+    <ReactMarkdown>
+      # Hello, *world*!
+    </ReactMarkdown>
+  )
+}\`
+  }}
+/>;`;
 
 export const REACT_TEMPLATE = {
   files: {

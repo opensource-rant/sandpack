@@ -129,3 +129,13 @@ export const WithStartingRoute: React.FC = () => (
     </SandpackLayout>
   </SandpackProvider>
 );
+
+export const WithFreezeButton: React.FC = () => (
+  <SandpackProvider
+    template="react"
+  >
+    <SandpackLayout>
+      <SandpackPreview showNavigator />
+    </SandpackLayout>
+  </SandpackProvider>
+);

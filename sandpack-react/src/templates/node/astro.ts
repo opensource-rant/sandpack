@@ -5,6 +5,7 @@ import { commonFiles } from "../common";
  */
 export const ASTRO_TEMPLATE = {
   files: {
+    "/src/components/Excalidraw.jsx": commonFiles["/Excalidraw.jsx"],
     "/src/styles.css": commonFiles["/styles.css"],
     "/src/pages/index.astro": {
       code: `---
@@ -30,6 +31,7 @@ const data = "world";
         dependencies: {
           astro: "^1.6.12",
           "esbuild-wasm": "^0.15.16",
+          "@excalidraw/excalidraw": "0.14.2"
         },
         scripts: {
           dev: "astro dev",

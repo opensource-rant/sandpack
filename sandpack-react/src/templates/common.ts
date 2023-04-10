@@ -16,4 +16,9 @@ h1 {
   font-size: 1.5rem;
 }`,
   },
+  "/Excalidraw.jsx": { 
+    code: `import Excalidraw from "@excalidraw/excalidraw";
+    export default () => { return (<Excalidraw />) };
+    `
+  }
 };

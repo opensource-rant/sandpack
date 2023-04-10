@@ -2,6 +2,7 @@ import type {
   SandpackClient,
   SandpackMessage,
 } from "@codesandbox/sandpack-client";
+import { Excalidraw, Footer } from '@excalidraw/excalidraw';
 import * as React from "react";
 
 import {
@@ -22,8 +23,10 @@ import { RefreshIcon, RestartIcon } from "../icons";
 export interface PreviewProps {
   style?: React.CSSProperties;
   showNavigator?: boolean;
+  showWhiteboard?: boolean;
   showOpenInCodeSandbox?: boolean;
   showRefreshButton?: boolean;
+  showCleanButton?: boolean;
   showRestartButton?: boolean;
 
   /**
@@ -88,7 +91,6 @@ export interface SandpackPreviewRef {
    */
   clientId: string;
 }
-
 export const SandpackPreview = React.forwardRef<
   SandpackPreviewRef,
   PreviewProps & React.HTMLAttributes<HTMLDivElement>
@@ -96,6 +98,7 @@ export const SandpackPreview = React.forwardRef<
   (
     {
       showNavigator = false,
+      showWhiteboard = false,
       showRefreshButton = true,
       showOpenInCodeSandbox = true,
       showSandpackErrorOverlay = true,
@@ -175,6 +178,7 @@ export const SandpackPreview = React.forwardRef<
             }}
             title="Sandpack Preview"
           />
+          {showWhiteboard && (<Excalidraw></Excalidraw>)}
 
           <div
             className={classNames("preview-actions", [previewActionsClassName])}
