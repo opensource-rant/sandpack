@@ -41,7 +41,7 @@
     "build:publish": "yarn build",
     "start": "tsc -p tsconfig.esm.json --watch",
     "dev": "start-storybook -p 6006 --quiet",
-    "build": "start-storybook",
+    "build": "build-storybook",
     "typecheck": "tsc",
     "format": "prettier --write '**/*.{ts,tsx,js,jsx}'",
     "format:check": "prettier --check '**/*.{ts,tsx}'"
