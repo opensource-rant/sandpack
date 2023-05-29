@@ -29,4 +29,4 @@ jobs:
       - name: Build storybook
         run: |
           yarn workspace @codesandbox/sandpack-react install \
-          && yarn workspace @codesandbox/sandpack-react build
+          && yarn workspace @codesandbox/sandpack-react build-storybook
