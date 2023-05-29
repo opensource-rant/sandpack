@@ -28,5 +28,6 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Build storybook
         run: |
-          yarn workspace @codesandbox/sandpack-react install
-          yarn workspace @codesandbox/sandpack-react build-storybook
+          cd sandbox-react
+          npm install
+          npm run build-storybook
